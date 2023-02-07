@@ -28,8 +28,9 @@ class Perhitungan {
     return new Promise((resolve, reject) => {
       this.totalUangSaku = 0;
       for (let i = 0; i < data.length; i++) {
-        this.totalUangSaku += Nunber(data[i].uangsaku);
+        this.totalUangSaku += Number(data[i].uangsaku);
       }
+      console.log(this.totalUangSaku, "<<<<<<<<<<<<");
       resolve(this.totalUangSaku);
     });
   };

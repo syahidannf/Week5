@@ -87,8 +87,8 @@
         }
         data.push({
           nama: nama.value,
-          umur: umur.value,
-          uangsaku: uangsaku.value,
+          umur: Number(umur.value),
+          uangsaku: Number(uangsaku.value),
         });
         console.log(data);
         const trdel = document.getElementsByTagName("tbody")[0];
@@ -124,10 +124,10 @@
         // calc.outputData();
         calc.hitungAll();
 
-        total_uangsaku = calc.total_uangsaku;
-        total_umur = calc.total_umur;
+        total_uang_saku = +calc.totalUangSaku;
+        total_umur = +calc.totalUmur;
 
-        resume.innerHTML = `rata rata pendaftar memiliki uang saku sebesar ${Math.round(total_uangsaku / data.length)} dengan rata rata umur ${Math.round(total_umur / data.length)} `;
+        resume.innerHTML = `rata rata pendaftar memiliki uang saku sebesar ${Math.round(total_uang_saku / data.length)} dengan rata rata umur ${Math.round(total_umur / data.length)} `;
         tableList.appendChild(tbody);
       }
 
